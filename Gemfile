@@ -18,6 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'bootstrap', '~> 5.3.0'
+gem 'bcrypt', '~> 3.1.7'
 gem 'dartsass-rails'
 
 gem "rails-controller-testing"
