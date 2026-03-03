@@ -19,15 +19,20 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application.css", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= render 'layouts/shim'%>
   </head>
   <body>
-    <%= render 'layouts/header' %>
+     <%= render 'layouts/header' %>
     <div class="container-fluid">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>    
+      <%= debug(params) if Rails.env.development? %>
     </div> 
+
+     <%= render 'layouts/footer' %>
   </body>
 </html>
