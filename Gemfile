@@ -20,6 +20,9 @@ gem "jbuilder"
 gem 'bootstrap', '~> 5.3.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'dartsass-rails'
+gem 'will_paginate'
+
+gem 'faker'
 
 gem "rails-controller-testing"
 

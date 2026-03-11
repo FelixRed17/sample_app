@@ -194,3 +194,44 @@ input {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination a, 
+.pagination span {
+  padding: 8px 12px;
+  margin: 2px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.pagination a:hover {
+  background-color: #f2f2f2;
+}
+
+.pagination .current {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination .disabled {
+  color: #999;
+}
