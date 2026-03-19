@@ -23,6 +23,7 @@ gem 'dartsass-rails'
 gem 'will_paginate'
 
 gem 'faker'
+gem 'active_storage_validations'
 
 gem "rails-controller-testing"
 
