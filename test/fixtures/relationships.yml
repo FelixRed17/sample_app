@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+   follower: felix
+   followed: Zoro
+
+two:
+   follower: felix
+   followed: Ussop
+
+three:
+   follower: Zoro
+   followed: felix
+
+four:
+   follower: luffy
+   followed: felix
