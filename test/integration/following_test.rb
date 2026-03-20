@@ -9,7 +9,6 @@ class FollowingTest < ActionDispatch::IntegrationTest
 end
 
 class FollowPagesTest < FollowingTest
-
    test "following page" do
       get following_user_path(@user)
       assert_response :unprocessable_entity
@@ -32,7 +31,6 @@ class FollowPagesTest < FollowingTest
 end
 
 class FollowTest < FollowingTest
-
    test "should follow a user the standard way" do
      assert_difference "@user.following.count", 1 do
        post relationships_path, params: { followed_id: @other.id }
@@ -49,7 +47,6 @@ class FollowTest < FollowingTest
 end
 
 class Unfollow < FollowingTest
-
    def setup
       super
       @user.follow(@other)
@@ -58,7 +55,6 @@ class Unfollow < FollowingTest
 end
 
 class UnfollowTest < Unfollow
-
    test "should unfollow a user the standard way" do
      assert_difference "@user.following.count", -1 do
        delete relationship_path(@relationship)

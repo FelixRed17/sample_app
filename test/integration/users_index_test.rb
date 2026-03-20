@@ -1,7 +1,6 @@
 require "test_helper"
 
 class UsersIndex < ActionDispatch::IntegrationTest
-
   def setup
     @admin     = users(:felix)
     @non_admin = users(:luffy)
@@ -9,7 +8,6 @@ class UsersIndex < ActionDispatch::IntegrationTest
 end
 
 class UsersIndexAdmin < UsersIndex
-
   def setup
     super
     log_in_as(@admin)
@@ -18,17 +16,16 @@ class UsersIndexAdmin < UsersIndex
 end
 
 class UsersIndexAdminTest < UsersIndexAdmin
-
   test "should render the index page" do
-    assert_template 'users/index'
+    assert_template "users/index"
   end
 
   test "should paginate users" do
-    assert_select 'div.pagination'
+    assert_select "div.pagination"
   end
 
   test "should be able to delete non-admin user" do
-    assert_difference 'User.count', -1 do
+    assert_difference "User.count", -1 do
       delete user_path(@non_admin)
     end
     assert_response :see_other
@@ -48,10 +45,9 @@ class UsersIndexAdminTest < UsersIndexAdmin
 end
 
 class UsersNonAdminIndexTest < UsersIndex
-
   test "should not have delete links as non-admin" do
     log_in_as(@non_admin)
     get users_path
-    assert_select 'a', text: 'delete', count: 0
+    assert_select "a", text: "delete", count: 0
   end
 end

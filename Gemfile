@@ -17,13 +17,13 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'bootstrap', '~> 5.3.0'
-gem 'bcrypt', '~> 3.1.7'
-gem 'dartsass-rails'
-gem 'will_paginate'
+gem "bootstrap", "~> 5.3.0"
+gem "bcrypt", "~> 3.1.7"
+gem "dartsass-rails"
+gem "will_paginate"
 
-gem 'faker'
-gem 'active_storage_validations'
+gem "faker"
+gem "active_storage_validations"
 
 gem "rails-controller-testing"
 

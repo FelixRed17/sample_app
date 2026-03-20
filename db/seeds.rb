@@ -4,7 +4,7 @@ User.create!(
     password: "Password@10",
     password_confirmation: "Password@10",
     admin: true,
-    activated: true, 
+    activated: true,
     activated_at: Time.zone.now
 )
 
@@ -17,7 +17,7 @@ User.create!(
     email: email,
     password: password,
     password_confirmation: password,
-    activated: true, 
+    activated: true,
     activated_at: Time.zone.now
 )
 end
