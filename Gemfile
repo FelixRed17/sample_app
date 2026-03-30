@@ -22,7 +22,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "bootstrap", "~> 5.3.0"
-gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.22"
 gem "dartsass-rails"
 gem "will_paginate"
 
